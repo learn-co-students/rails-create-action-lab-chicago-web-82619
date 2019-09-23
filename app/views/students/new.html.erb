@@ -1,1 +1,8 @@
-<!-- Create your form here -->
+<h1>Student Form</h1>
+<%= form_for @student, url: students_path do |f| %>
+  <%= label_tag 'First Name'  %> <br>
+  <%= f.text_field :first_name %><br>
+  <%= label_tag 'Last Name' %><br>
+  <%= f.text_field :last_name %><br>
+  <%= f.submit "Create Student" %>
+<% end %>

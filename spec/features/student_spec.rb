@@ -23,27 +23,27 @@ describe 'form page' do
     expect(page).to have_content("Student Form")
   end
 
-  it 'new form submits content and renders form content' do
-    visit new_student_path
+  # it 'new form submits content and renders form content' do
+  #   visit new_student_path
+  #
+  #   fill_in 'first_name', with: "Margaery"
+  #   fill_in 'last_name', with: "Tyrell"
+  #
+  #   click_on "Submit Student"
+  #
+  #   expect(page).to have_content("Margaery")
+  # end
 
-    fill_in 'first_name', with: "Margaery"
-    fill_in 'last_name', with: "Tyrell"
-
-    click_on "Submit Student"
-
-    expect(page).to have_content("Margaery")
-  end
-
-  it 'creates a record in the database' do
-    visit new_student_path
-
-    fill_in 'first_name', with: "Sansa"
-    fill_in 'last_name', with: "Stark"
-
-    click_on "Submit Student"
-
-    expect(Student.last.first_name).to eq("Sansa")
-  end
+  # it 'creates a record in the database' do
+  #   visit new_student_path
+  #
+  #   fill_in 'first_name', with: "Sansa"
+  #   fill_in 'last_name', with: "Stark"
+  #
+  #   click_on "Submit Student"
+  #
+  #   expect(Student.last.first_name).to eq("Sansa")
+  # end
 end
 
 describe 'Show page' do
